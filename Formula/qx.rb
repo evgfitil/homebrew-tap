@@ -5,21 +5,21 @@
 class Qx < Formula
   desc "Generate shell commands from natural language using LLM"
   homepage "https://github.com/evgfitil/qx"
-  version "0.4.0"
+  version "0.5.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/evgfitil/qx/releases/download/v0.4.0/qx_darwin_amd64.tar.gz"
-      sha256 "e8c3f973b200db8f7c39ed37c2fe45f81af22adda88f15dcaaae034a486bf504"
+      url "https://github.com/evgfitil/qx/releases/download/v0.5.0/qx_darwin_amd64.tar.gz"
+      sha256 "a050c800c6d0e15aac6cc6968704df41c766cc0f17464b5d33d0289eb2a00e4f"
 
       def install
         bin.install "qx"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/evgfitil/qx/releases/download/v0.4.0/qx_darwin_arm64.tar.gz"
-      sha256 "b2eb43b09feccce29b535d5a452fbaaedb618036fa831b6af588cb6bae0d5a90"
+      url "https://github.com/evgfitil/qx/releases/download/v0.5.0/qx_darwin_arm64.tar.gz"
+      sha256 "162b5a7737e5980f8df359d2e56c22ccca6a36628ec3068e3dab2d9eea89a95d"
 
       def install
         bin.install "qx"
@@ -29,15 +29,15 @@ class Qx < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/evgfitil/qx/releases/download/v0.4.0/qx_linux_amd64.tar.gz"
-      sha256 "f0ba5e973a9dad8cc82b57d037a109065f2e32628f3f3aa55665a70e92a0fcf2"
+      url "https://github.com/evgfitil/qx/releases/download/v0.5.0/qx_linux_amd64.tar.gz"
+      sha256 "3c1c10eb120057076b302a35fd1361c60887b46a8b995b7eab6b38fbc276ab53"
       def install
         bin.install "qx"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/evgfitil/qx/releases/download/v0.4.0/qx_linux_arm64.tar.gz"
-      sha256 "b6d59a5ee2154f4608df6ca24309edcd40bd93adaeb670d2bf9c9bc11b5aeef9"
+      url "https://github.com/evgfitil/qx/releases/download/v0.5.0/qx_linux_arm64.tar.gz"
+      sha256 "26cb7468fcccccf4146e9cce555f574f712c9765980332a32e8ffa3b45edab6e"
       def install
         bin.install "qx"
       end
