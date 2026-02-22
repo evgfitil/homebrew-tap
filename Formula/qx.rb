@@ -5,23 +5,23 @@
 class Qx < Formula
   desc "Generate shell commands from natural language using LLM"
   homepage "https://github.com/evgfitil/qx"
-  version "0.7.3"
+  version "0.8.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/evgfitil/qx/releases/download/v0.7.3/qx_darwin_amd64.tar.gz"
-      sha256 "c29c683ca23bc30801e13f2f42b25edfd1171824b37c49a9901d39c413a0395a"
+      url "https://github.com/evgfitil/qx/releases/download/v0.8.0/qx_darwin_amd64.tar.gz"
+      sha256 "2094ae0359522c799973ec0423285735ec7080e4b79685037d58aa3f09d70f8b"
 
-      def install
+      define_method(:install) do
         bin.install "qx"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/evgfitil/qx/releases/download/v0.7.3/qx_darwin_arm64.tar.gz"
-      sha256 "5ae18044733c1270330ede62f956695eb6d96aadc646f46900b4121cae05ef96"
+      url "https://github.com/evgfitil/qx/releases/download/v0.8.0/qx_darwin_arm64.tar.gz"
+      sha256 "fc3a5221f5a636006852280af0aec847da4513461448ca1ff2f918dc649322d5"
 
-      def install
+      define_method(:install) do
         bin.install "qx"
       end
     end
@@ -29,16 +29,16 @@ class Qx < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/evgfitil/qx/releases/download/v0.7.3/qx_linux_amd64.tar.gz"
-      sha256 "e408c12d23fdea3d77ebf3edc678d361921a31fef62b911c21a956eb73221c88"
-      def install
+      url "https://github.com/evgfitil/qx/releases/download/v0.8.0/qx_linux_amd64.tar.gz"
+      sha256 "383b81d65fb8ec354af37d81e091afaab1e2523e514048b511f29703e5a75d67"
+      define_method(:install) do
         bin.install "qx"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/evgfitil/qx/releases/download/v0.7.3/qx_linux_arm64.tar.gz"
-      sha256 "2e201b5de3b1b84873a3a0549784019037a1cb560d1d28ded8f8b4f7f80954c7"
-      def install
+      url "https://github.com/evgfitil/qx/releases/download/v0.8.0/qx_linux_arm64.tar.gz"
+      sha256 "21d9f9dc638ba29243cbfb258a73acaff6b3174ed387c84321dd1b49229256eb"
+      define_method(:install) do
         bin.install "qx"
       end
     end
