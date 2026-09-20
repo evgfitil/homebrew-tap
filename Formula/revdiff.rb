@@ -5,41 +5,53 @@
 class Revdiff < Formula
   desc "TUI for reviewing diffs, files, and documents with inline annotations (fork of umputun/revdiff, adds arc)"
   homepage "https://github.com/evgfitil/revdiff-releases"
-  version "1.4.1-arc"
+  version "1.13.0-arc"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/evgfitil/revdiff-releases/releases/download/v1.4.1-arc/revdiff_1.4.1-arc_darwin_amd64.tar.gz"
-      sha256 "6ea1342b4ff5838f5c0d07a91534a92d9ba891548e44ded223c42f99be25e9ae"
+      url "https://github.com/evgfitil/revdiff-releases/releases/download/v1.13.0-arc/revdiff_1.13.0-arc_darwin_amd64.tar.gz"
+      sha256 "d39add2e9847ababea7a7438515c795a2387563dea7b39d7edc32d22bfe15d01"
 
       define_method(:install) do
         bin.install "revdiff"
+        bash_completion.install "completions/revdiff.bash" => "revdiff"
+        zsh_completion.install "completions/revdiff.zsh" => "_revdiff"
+        fish_completion.install "completions/revdiff.fish" => "revdiff.fish"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/evgfitil/revdiff-releases/releases/download/v1.4.1-arc/revdiff_1.4.1-arc_darwin_arm64.tar.gz"
-      sha256 "acba7576690a05cd343bb95378c1e9e49770a00e1942bff88e6d79f3a48e672e"
+      url "https://github.com/evgfitil/revdiff-releases/releases/download/v1.13.0-arc/revdiff_1.13.0-arc_darwin_arm64.tar.gz"
+      sha256 "49c23783db1c0a70f005ab0dc3274d0c4db6205c1118bdc4e3e42ae8b53c2184"
 
       define_method(:install) do
         bin.install "revdiff"
+        bash_completion.install "completions/revdiff.bash" => "revdiff"
+        zsh_completion.install "completions/revdiff.zsh" => "_revdiff"
+        fish_completion.install "completions/revdiff.fish" => "revdiff.fish"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/evgfitil/revdiff-releases/releases/download/v1.4.1-arc/revdiff_1.4.1-arc_linux_amd64.tar.gz"
-      sha256 "81cf6d0db6ccddd240610e6b7b94a4376ec970f1e2c6f579aeb539fc19fae94b"
+      url "https://github.com/evgfitil/revdiff-releases/releases/download/v1.13.0-arc/revdiff_1.13.0-arc_linux_amd64.tar.gz"
+      sha256 "5d94823da7abe07f16c325439b8db192759b25bda57bdede09aa37042e18514a"
       define_method(:install) do
         bin.install "revdiff"
+        bash_completion.install "completions/revdiff.bash" => "revdiff"
+        zsh_completion.install "completions/revdiff.zsh" => "_revdiff"
+        fish_completion.install "completions/revdiff.fish" => "revdiff.fish"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/evgfitil/revdiff-releases/releases/download/v1.4.1-arc/revdiff_1.4.1-arc_linux_arm64.tar.gz"
-      sha256 "e85c90391ce8384d3962bf51e4f0bd19a363963a4638abf68b6a43da0c62d6ea"
+      url "https://github.com/evgfitil/revdiff-releases/releases/download/v1.13.0-arc/revdiff_1.13.0-arc_linux_arm64.tar.gz"
+      sha256 "6e6779f6d22acefcdaa612c2ec52bfb59754daa3ac1cd3100f0670bbe5b59b8d"
       define_method(:install) do
         bin.install "revdiff"
+        bash_completion.install "completions/revdiff.bash" => "revdiff"
+        zsh_completion.install "completions/revdiff.zsh" => "_revdiff"
+        fish_completion.install "completions/revdiff.fish" => "revdiff.fish"
       end
     end
   end
